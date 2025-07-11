@@ -1,0 +1,414 @@
+16 sized Block: 1 times in a row -> kernel size of  4.0 ?               - from here  |
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ?               | + 1
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?              | + 1
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?              | + 1
+                                                                                     | + 1 => Padding of 4 on the left
+32 sized Block: 21 times in a row -> kernel size of  5.656854249492381 ? - from here    |
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?                 | + 1
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?                 | + 1
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ?                  | + 1
+16 sized Block: 1 times in a row -> kernel size of  4.0 ?                               | + 1
+                                                                                        | + 1 => Padding of 5 on the right
+12 sized Block: 1 times in a row -> kernel size of  3.4641016151377544 ? - width of 3, height of 4. This is on the top right corner.
+
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ? - kernel moves down by one
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+40 sized Block: 21 times in a row -> kernel size of  6.324555320336759 ? width of 8, height of 5
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ?
+
+15 sized Block: 1 times in a row -> kernel size of  3.872983346207417 ? - width of 3, height of 5
+
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ? - kernel moves down by one
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 1 times in a row -> kernel size of  6.0 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+48 sized Block: 21 times in a row -> kernel size of  6.928203230275509 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+36 sized Block: 1 times in a row -> kernel size of  6.0 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+
+18 sized Block: 1 times in a row -> kernel size of  4.242640687119285 ? - width of 3, height of 6
+
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+49 sized Block: 1 times in a row -> kernel size of  7.0 ?
+56 sized Block: 21 times in a row -> kernel size of  7.483314773547883 ?
+49 sized Block: 1 times in a row -> kernel size of  7.0 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?
+
+21 sized Block: 1 times in a row -> kernel size of  4.58257569495584 ? - width of 3, height of 7
+
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ? - width of 3, height of 8 (finally entire kernel can fit)
+
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?               - since kernel can fit now, now it can reach its desired 64 sized block (max)
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+64 sized Block: 21 times in a row -> kernel size of  8.0 ?
+56 sized Block: 1 times in a row -> kernel size of  7.483314773547883 ?
+48 sized Block: 1 times in a row -> kernel size of  6.928203230275509 ?
+40 sized Block: 1 times in a row -> kernel size of  6.324555320336759 ?
+32 sized Block: 1 times in a row -> kernel size of  5.656854249492381 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+49 sized Block: 1 times in a row -> kernel size of  7.0 ?
+56 sized Block: 21 times in a row -> kernel size of  7.483314773547883 ?
+49 sized Block: 1 times in a row -> kernel size of  7.0 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?
+21 sized Block: 1 times in a row -> kernel size of  4.58257569495584 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 1 times in a row -> kernel size of  6.0 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+48 sized Block: 21 times in a row -> kernel size of  6.928203230275509 ?
+42 sized Block: 1 times in a row -> kernel size of  6.48074069840786 ?
+36 sized Block: 1 times in a row -> kernel size of  6.0 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+18 sized Block: 1 times in a row -> kernel size of  4.242640687119285 ?
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ?
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+40 sized Block: 21 times in a row -> kernel size of  6.324555320336759 ?
+35 sized Block: 1 times in a row -> kernel size of  5.916079783099616 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ?
+15 sized Block: 1 times in a row -> kernel size of  3.872983346207417 ?
+16 sized Block: 1 times in a row -> kernel size of  4.0 ?
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?
+32 sized Block: 21 times in a row -> kernel size of  5.656854249492381 ?
+28 sized Block: 1 times in a row -> kernel size of  5.291502622129181 ?
+24 sized Block: 1 times in a row -> kernel size of  4.898979485566356 ?
+20 sized Block: 1 times in a row -> kernel size of  4.47213595499958 ?
+16 sized Block: 1 times in a row -> kernel size of  4.0 ?
+
+12 sized Block: 2 times in a row -> kernel size of  3.4641016151377544 ?
+
+15 sized Block: 1 times in a row -> kernel size of  3.872983346207417 ?
+18 sized Block: 1 times in a row -> kernel size of  4.242640687119285 ?
+21 sized Block: 1 times in a row -> kernel size of  4.58257569495584 ?
+24 sized Block: 21 times in a row -> kernel size of  4.898979485566356 ?
+21 sized Block: 1 times in a row -> kernel size of  4.58257569495584 ?
+18 sized Block: 1 times in a row -> kernel size of  4.242640687119285 ?
+15 sized Block: 1 times in a row -> kernel size of  3.872983346207417 ?
+12 sized Block: 1 times in a row -> kernel size of  3.4641016151377544 ?
+
+9 sized Block: 1 times in a row -> kernel size of  3.0 ?                - bottom right corner
+
+## end of first map
+
+1 sized Block: 1 times in a row -> kernel size of  1.0 ?                         left top, 2x2, with top padding of 1 and left padding of 1
+2 sized Block: 27 times in a row -> kernel size of  1.4142135623730951 ?         27x move right with covering area of 2
+1 sized Block: 1 times in a row -> kernel size of  1.0 ?                         reach right side padding with top padding of 1, bottom padding of 1
+2 sized Block: 1 times in a row -> kernel size of  1.4142135623730951 ?          wraparound, move down -> now only left column obstructed by padding
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 2 times in a row -> kernel size of  1.4142135623730951 ?
+4 sized Block: 27 times in a row -> kernel size of  2.0 ?
+2 sized Block: 1 times in a row -> kernel size of  1.4142135623730951 ?
+1 sized Block: 1 times in a row -> kernel size of  1.0 ?
+2 sized Block: 27 times in a row -> kernel size of  1.4142135623730951 ?
+1 sized Block: 1 times in a row -> kernel size of  1.0 ?
+
+# end of second map
+
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+30 sized Block: 11 times in a row -> kernel size of  5.477225575051661 ?
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 2 times in a row -> kernel size of  5.477225575051661 ?
+36 sized Block: 11 times in a row -> kernel size of  6.0 ?
+30 sized Block: 1 times in a row -> kernel size of  5.477225575051661 ?
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+30 sized Block: 11 times in a row -> kernel size of  5.477225575051661 ?
+25 sized Block: 1 times in a row -> kernel size of  5.0 ?
+
+36 sized Block: 1 times in a row -> kernel size of  6.0 ?
+9 sized Block: 64 times in a row -> kernel size of  3.0 ?
+16 sized Block: 484 times in a row -> kernel size of  4.0 ?
+36 sized Block: 400 times in a row -> kernel size of  6.0 ?

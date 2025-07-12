@@ -81,9 +81,23 @@ def main():
         print("  python export_network_data.py network.xnet custom_report.txt")
         print("  python export_network_data.py xnet_files/star4_24_12.xnet")
         sys.exit(1)
-    
+
     xnet_path = sys.argv[1]
     output_path = sys.argv[2] if len(sys.argv) > 2 else None
+
+    try:
+        result_path = export_network_data(xnet_path, output_path)
+        print(f"\nExport completed successfully!")
+        print(f"Output saved to: {result_path}")
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+    except RuntimeError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        sys.exit(1)
     
 
 if __name__ == "__main__":

@@ -64,10 +64,10 @@ output_path = network.export_comprehensive_data("custom_report.txt")
 ```bash
 cd code
 # Print analysis to terminal (original behavior)
-python main.py path/to/your/network.xnet
+python3 main.py path/to/your/network.xnet
 
 # Export comprehensive data to text file
-python main.py path/to/your/network.xnet --export
+python3 main.py path/to/your/network.xnet --export
 ```
 
 This will run a comprehensive analysis of the specified network file, displaying detailed layer information including padding analysis for convolutional layers.
@@ -76,13 +76,13 @@ This will run a comprehensive analysis of the specified network file, displaying
 
 ```bash
 # Using the dedicated export script
-python export_network_data.py path/to/your/network.xnet
+python3 export_network_data.py path/to/your/network.xnet
 
 # Export with custom output filename
-python export_network_data.py network.xnet custom_report.txt
+python3 export_network_data.py network.xnet custom_report.txt
 
 # Using sample files
-python export_network_data.py xnet_files/star4_24_12.xnet
+python3 export_network_data.py xnet_files/star4_24_12.xnet
 ```
 
 The export functionality creates comprehensive text files containing ALL accessible network data:
@@ -93,17 +93,19 @@ The export functionality creates comprehensive text files containing ALL accessi
 - Map information with padding analysis
 - Network topology and connectivity patterns
 
+**Note**: Both automatic filename generation (based on input file) and custom output filenames are fully supported and working correctly.
+
 ### Command Line Usage
 
 The tool accepts command line arguments for both analysis modes:
 
 ```bash
 # Terminal output
-python main.py code/xnet_files/star4_24_12.xnet
+python3 main.py xnet_files/star4_24_12.xnet
 
 # File export
-python main.py code/xnet_files/star4_24_12.xnet --export
-python export_network_data.py code/xnet_files/star4_24_12.xnet
+python3 main.py xnet_files/star4_24_12.xnet --export
+python3 export_network_data.py xnet_files/star4_24_12.xnet
 ```
 
 ## File Structure
@@ -114,8 +116,8 @@ python export_network_data.py code/xnet_files/star4_24_12.xnet
 │   ├── README.md            # This file
 │   ├── main.py              # Main analysis script
 │   ├── export_network_data.py # Comprehensive data export script
-│   ├── EXPORT_README.md     # Export functionality documentation
 │   ├── xnet_parser.py       # XNET file parser and Network class
+│   ├── util.py              # Utility functions
 │   ├── components/          # Core data structures
 │   │   ├── __init__.py
 │   │   ├── layer.py         # Layer and Map classes
@@ -129,8 +131,8 @@ python export_network_data.py code/xnet_files/star4_24_12.xnet
 │   ├── methods.txt          # Analysis method documentation
 │   └── multilink_blocks.txt # MultiLink analysis documentation
 ├── Report/                  # Project documentation and reports
-├── vortag_*/               # Presentation materials
-└── xml/                    # Decompressed XML files (generated during parsing)
+├── vortrag_*/              # Presentation materials
+└── xml/                    # Temporary XML files (automatically cleaned up)
 ```
 
 ## XNET File Format
@@ -161,13 +163,7 @@ output_path = network.export_comprehensive_data()
 ```
 
 **Key Methods:**
-- `export_comprehensive_data(output_path=None)`: Export all network data to text file
-- `generic_info()`: Basic network statistics
-- `full_layer_info(show_padding=True)`: Detailed layer analysis
-- `convolutional_layer_maps_info()`: Convolutional layer maps
-- `count_layers()`, `count_neurons()`, `count_links()`: Statistics
-
-**Key Methods:**
+- `export_comprehensive_data(output_path=None)` - Export all network data to text file
 - `generic_info()` - Returns basic network statistics
 - `full_layer_info(show_padding=True)` - Returns detailed layer analysis
 - `convolutional_layer_maps_info()` - Returns convolutional layer map information
@@ -175,8 +171,9 @@ output_path = network.export_comprehensive_data()
 - `count_neurons()` - Returns total number of neurons
 - `count_links()` - Returns number of regular links
 - `count_multilinks()` - Returns number of MultiLinks
+- `count_unique_multilinks()` - Returns number of unique MultiLink IDs
+- `count_anylink()` - Returns total number of connections (links + multilinks)
 - `count_connections_from_layer(layer_level)` - Returns link counts for specific layer
-- `export_comprehensive_data(output_path=None)` - Export all network data to text file
 
 #### `Neuron`
 Represents individual neurons with properties like ID, layer assignment, and connections.
@@ -213,7 +210,7 @@ Represents feature maps in convolutional layers.
 from xnet_parser import Network
 
 # Load network
-network = Network("code/xnet_files/star4_24_12.xnet")
+network = Network("xnet_files/star4_24_12.xnet")
 
 # Get basic network statistics
 print(network.generic_info())
@@ -349,8 +346,9 @@ No external dependencies are required.
 ## Documentation
 
 - **Main README**: This file - overview and basic usage
-- **Export Documentation**: `EXPORT_README.md` - detailed export functionality documentation
 - **Code Documentation**: Inline docstrings and comments throughout the codebase
+- **Method Documentation**: `methods.txt` - analysis method documentation
+- **MultiLink Documentation**: `multilink_blocks.txt` - MultiLink analysis documentation
 
 ## Troubleshooting
 
@@ -362,11 +360,12 @@ No external dependencies are required.
 4. **Import errors**: Ensure you're running from the correct directory and all component files are present
 5. **Export permission errors**: Ensure write permissions for the output directory
 6. **Large file exports**: For very large networks, export files may be several MB in size
+7. **Python command not found**: Use `python3` instead of `python` on systems where Python 3 is not the default
 
 ## Performance Notes
 
 - Large networks may take significant time to process during parsing and analysis
-- XML decompression creates temporary files that are currently preserved for debugging
+- XML decompression creates temporary files that are automatically cleaned up after parsing
 - Memory usage scales with network size, particularly for networks with many MultiLinks
 - Padding analysis requires additional computation time for convolutional layers
 - Export operations are generally fast, but file I/O time scales with data volume
@@ -405,7 +404,7 @@ import glob
 from pathlib import Path
 
 # Process multiple XNET files
-xnet_files = glob.glob("code/xnet_files/*.xnet")
+xnet_files = glob.glob("xnet_files/*.xnet")
 for file_path in xnet_files:
     print(f"Processing {file_path}...")
     network = Network(file_path)
@@ -450,12 +449,10 @@ To contribute to this project:
 - Assumes square kernels for padding detection
 - Padding analysis works best when entire kernel is visible in some positions
 - Currently optimized for convolutional networks with MultiLink connections
-- XML temporary files are not automatically cleaned up (for debugging purposes)
 
 ## Future Enhancements
 
 - Support for non-square feature maps and kernels
-- Automatic cleanup of temporary XML files
 - Export to standard neural network formats (ONNX, TensorFlow, PyTorch)
 - Performance optimizations for very large networks
 - Support for additional network architectures beyond CNNs
